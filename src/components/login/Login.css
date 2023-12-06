@@ -32,9 +32,13 @@
 }
 .sign-mobile  input {
     border: none;
-    color: #D0D3D4;
+    
     font-size: 1.125rem;
 }
+.sign-mobile  input::place {
+    color: #D0D3D4;
+}
+
 .sign-button{
     height: 3.125rem;
     background-color: var(--Primary-Color, #552583);

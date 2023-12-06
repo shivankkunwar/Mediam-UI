@@ -1,7 +1,11 @@
-import React from "react";
-import {Link} from "react-router-dom"
+import React, {useState} from "react";
+import {Link, useNavigate } from "react-router-dom"
+
 import "./Login.css";
 function Login() {
+    const navigate = useNavigate();
+    const [Phone, setPhone] = useState("");
+   
   return (
     <div
       style={{
@@ -53,11 +57,12 @@ function Login() {
             </defs>
           </svg>
             <div className="country-code">+91</div>
-            <input placeholder="Phone number" />
+            <input placeholder="Phone number" onChange={(e)=>setPhone(e.target.value)}/>
         </div>
-        <Link  to= "/otp">
-        <div className="sign-button" >Sign In</div>
-        </Link>
+        
+        <div className="sign-button" onClick={()=>navigate("/otp", {state: {phone:Phone}})} >Sign In</div>
+        
+        
        
       </div>
     </div>

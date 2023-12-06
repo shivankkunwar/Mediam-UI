@@ -1,5 +1,54 @@
-.outer-otp{
-    width: 25.875rem;
-    height: 20.87rem;
-    background-color: grey;
+.outer-otp {
+  width: 25.875rem;
+  height: 20.87rem;
+  
+}
+.OTP-title {
+  font-size: 2.375rem;
+  color: var(--Primary-Color, #552583);
+  font-style: normal;
+  line-height: normal;
+  font-weight: 500;
+}
+
+.OTP-description {
+  font-size: 0.75rem;
+  height: 3.06rem;
+  width: 100%;
+  margin-top: 0.625rem;
+}
+.OTP-input {
+  
+  flex-shrink: 0;
+ 
+  margin-bottom: 1.6rem;
+  display: flex;
+  
+}
+.OTPinputSlot{
+    width:4.9rem;
+    height:4.825rem;
+    font-size: 2rem;
+    text-align: center;
+}   
+
+.OTP-verify-button {
+width: 25.87rem;
+height: 3.125rem;
+color: white;
+flex-shrink: 0;
+display: flex;
+justify-content: center;
+align-items:center;
+border-radius: 12px;
+background: var(--Primary-Color, #552583);
+}
+
+.OTP-other{
+    text-align: center;
+    text-decoration: underline;
+}
+.OTP-resend{
+    margin-top: 1.35rem;
+    margin-bottom: 1rem;
 }
