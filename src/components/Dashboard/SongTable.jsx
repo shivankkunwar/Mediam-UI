@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import image from "../../assets/profile.jpg";
-import Musicplayer from "./musicPlayer";
+import Musicplayer from "./Musicplayer";
 import "./SongTable.css";
 
 function SongTable() {
