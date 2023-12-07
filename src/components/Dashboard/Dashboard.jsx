@@ -1,7 +1,9 @@
 import React from "react";
 import "./Dashboard.css";
 import SongTable from "./SongTable";
+import {Link, useNavigate } from "react-router-dom";
 function Dashboard() {
+  const navigate = useNavigate();
   return (
     <div style={{ display: "flex" }}>
       <div className="left-container">
@@ -42,7 +44,7 @@ function Dashboard() {
             </svg>
             Songs
           </div>
-          <div className="logout">
+          <div className="logout" onClick={()=>navigate("/")}>
             <svg
               width="20"
               height="20"

@@ -42,7 +42,9 @@
   line-height: 22px;
   border-right: 3px solid var(--daybreak-blue-6, #1890ff);
 }
-
+.right-container{
+    width: 74rem;
+}
 
 .top-right-container {
   width: 67.125rem;
@@ -91,7 +93,7 @@
   align-items: center;
 }
 .right-song-table{
-    height: 65vh;
+    height: 68vh;
     padding-left: 1.81rem;
     overflow-y: auto;
     

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import image from "../../assets/profile.jpg";
-
+import Musicplayer from "./musicPlayer";
 import "./SongTable.css";
 
 function SongTable() {
@@ -9,38 +9,41 @@ function SongTable() {
       name: "Song 1",
       source: "Spotify",
       addedOn: "17/06/2021",
-      link: "https://example.com/song1.mp3",
+      link: "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
     },
     {
       name: "Song 2",
       source: "YouTube",
       addedOn: "18/06/2021",
-      link: "https://example.com/song2.mp4",
+      link: "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
     },
     {
       name: "Song 3",
       source: "Apple Music",
       addedOn: "19/06/2021",
-      link: "https://example.com/song3.m4a",
-    },{
-        name: "Song 4",
-        source: "SoundCloud",
-        addedOn: "20/06/2021",
-        link: "https://example.com/song4.mp3"
+      link: "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
     },
     {
-        name: "Song 5",
-        source: "Spotify",
-        addedOn: "21/06/2021",
-        link: "https://example.com/song5.mp3"
+      name: "Song 4",
+      source: "SoundCloud",
+      addedOn: "20/06/2021",
+      link: "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
     },
     {
-        name: "Song 6",
-        source: "YouTube",
-        addedOn: "22/06/2021",
-        link: "https://example.com/song6.mp4"
+      name: "Song 5",
+      source: "Spotify",
+      addedOn: "21/06/2021",
+      link: "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
+    },
+    {
+      name: "Song 6",
+      source: "YouTube",
+      addedOn: "22/06/2021",
+      link: "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3",
     },
   ]);
+
+ 
 
   return (
     <div>
@@ -89,6 +92,7 @@ function SongTable() {
               <td>
                 <div className="buttons-music">
                   <svg
+                    onClick={() => handlePlay(user)}
                     width="40"
                     height="40"
                     viewBox="0 0 40 40"
@@ -122,6 +126,16 @@ function SongTable() {
           ))}
         </tbody>
       </table>
+      <div
+        style={{
+          position: "fixed",
+          bottom: 0,
+        
+          padding: "1rem",
+        }}
+      >
+        <Musicplayer data={data} />
+      </div>
     </div>
   );
 }
